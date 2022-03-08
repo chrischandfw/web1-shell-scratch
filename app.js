@@ -11,8 +11,44 @@ const winsEl = document.getElementById('wins');
 const totalEl = document.getElementById('total');
 // let state
 let wins = 0;
-let total = 0:
-// set event listeners 
+let total = 0;
+
+//Create function first
+
+function handleGuess(hatId){
+    hatImg0.src = 'assets/normal-hat.png';
+    hatImg1.src = 'assets/normal-hat.png';
+    hatImg2.src = 'assets/normal-hat.png';
+
+    total++;
+
+    const numberBetweenZeroAndThree = Math.floor(Math.random() * 3);
+
+    if (numberBetweenZeroAndThree === hatId){
+        wins++;
+    }
+
+    const correctHatImgEl = document.getElementById(`hat-${numberBetweenZeroAndThree}`);
+    correctHatImgEl.src = 'assets/correct-hat.png';
+
+    winsEl.textContent = wins;
+    totalEl.textContent = total;
+}
+// set event listeners for the buttons
+
+button0.addEventListener('click', () => {
+    handleGuess(0);
+});
+
+button1.addEventListener('click', () => {
+    handleGuess(1);
+});
+
+button2.addEventListener('click', () => {
+    handleGuess(2);
+});
+
+
 
   // get user input
   // use user input to update state 

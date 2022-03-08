@@ -21,7 +21,7 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 -Use div tags to show user the score of correct and total guesses.
 -To track score, use winsEl.textContent = winCount
 -3 buttons to give user ability to select hat.
-	button.addEventListener('click', () => {})
+	use button.addEventListener('click', () => {})
 
 Additional considerations:
 - Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?

@@ -4,8 +4,8 @@ body {
     
     --color1: rgb(230, 68, 216);
     --color2: rgb(230, 68, 216);
-    --color3: rgb(230, 68, 216);
-    --color4: rgb(230, 68, 216);
+    --color3: rgb(255, 255, 255);
+    --color4: rgb(255, 255, 255);
     --color5: rgb(230, 68, 216);
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
@@ -78,7 +78,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -112,4 +112,36 @@ footer {
 
 .main-logo{
 	width: 750px;
+}
+
+.buttons{
+	background-color: goldenrod;
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	transition: 0.5s; 
+}
+
+button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+button:hover {
+	background-color: #f7c2f9;
+}
+
+button:hover span {
+	padding-right: 25px;
+}
+
+button:hover span:after {
+	opacity: 1;
+	right: 0;
 }
