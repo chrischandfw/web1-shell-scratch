@@ -89,3 +89,23 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+.hats{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.hat{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+.hat img{
+	width: 150px;
+	margin-bottom: 15px;
+}

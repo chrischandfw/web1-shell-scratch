@@ -16,6 +16,13 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 ![wireframe](/assets/shellscratch-wireframe.png)
 
+-2 different hat images, one with a ball below it. User can choose which of the 3 hats will have the ball.
+	hat.Img.src ='correct-hat.png'
+-Use div tags to show user the score of correct and total guesses.
+-To track score, use winsEl.textContent = winCount
+-3 buttons to give user ability to select hat.
+	button.addEventListener('click', () => {})
+
 Additional considerations:
 - Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
 - Consider your data model. 
@@ -24,4 +31,4 @@ Additional considerations:
   - What arrays might you need? 
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
-- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
