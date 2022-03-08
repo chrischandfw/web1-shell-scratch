@@ -2,11 +2,11 @@
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
+    --color1: rgb(230, 68, 216);
+    --color2: rgb(230, 68, 216);
+    --color3: rgb(230, 68, 216);
+    --color4: rgb(230, 68, 216);
+    --color5: rgb(230, 68, 216);
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
