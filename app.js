@@ -16,9 +16,9 @@ let total = 0;
 //Create function first
 
 function handleGuess(hatId){
-    hatImg0.src = 'assets/normal-hat.png';
-    hatImg1.src = 'assets/normal-hat.png';
-    hatImg2.src = 'assets/normal-hat.png';
+    hatImg0.src = 'assets/goldkinghat.png';
+    hatImg1.src = 'assets/goldkinghat.png';
+    hatImg2.src = 'assets/goldkinghat.png';
 
     total++;
 
@@ -29,7 +29,7 @@ function handleGuess(hatId){
     }
 
     const correctHatImgEl = document.getElementById(`hat-${numberBetweenZeroAndThree}`);
-    correctHatImgEl.src = 'assets/correct-hat.png';
+    correctHatImgEl.src = 'assets/goldkinghat2.png';
 
     winsEl.textContent = wins;
     totalEl.textContent = total;
