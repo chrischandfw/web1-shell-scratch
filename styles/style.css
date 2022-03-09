@@ -2,11 +2,11 @@
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
+    /* --color1: rgb(230, 68, 216); */
+    /* --color2: rgb(230, 68, 216); */
+    --color3: rgb(255, 255, 255);
+    --color4: rgb(255, 255, 255);
+    /* --color5: rgb(230, 68, 216); */
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -28,8 +28,12 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    /* background-color: var(--color2); */
+	background-image: url('../assets/3kingsfortress.jpg');
+	background-position: center;
 }
+
+
 
 main {
     display: flex;
@@ -40,7 +44,7 @@ main {
 }
 
 section {
-    background-color: var(--color5);
+    /* background-color: var(--color5); */
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -65,6 +69,15 @@ header {
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+	background-color: gold;
+	border-radius: 25px;
+	width: 500px;
+	text-align: center;
+	border: 10px solid transparent;
+	padding: 5px;
+	border-color: goldenrod;
+	box-shadow: 2px 2px 10px 10px white;
+
 }
 
 .gutter-right {
@@ -77,8 +90,13 @@ header img {
 
 p {
     margin: var(--gutter);
+	border-radius: 25px;
+	font-style: italic;
+	background-color: gold;
+	width: 200px;
+	text-align: center;
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +106,69 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.hats{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.hat{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+.hat img{
+	width: 150px;
+	margin-bottom: 15px;
+}
+
+.main-logo{
+	width: 555px;
+}
+
+.buttons{
+	background-color: goldenrod;
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	transition: 0.5s; 
+	font-family: cursive;
+}
+
+button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+button:hover {
+	background-color: #720b75;
+}
+
+button:hover span {
+	padding-right: 25px;
+}
+
+button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.tracker{
+	background-color: gold;
+	width: 250px;
+	text-align: center;
+	border-radius: 25px;
+	font-weight: bold;
 }
