@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
-const hatImg0 = document.getElementById('hat-0');
-const hatImg1 = document.getElementById('hat-1');
-const hatImg2 = document.getElementById('hat-2');
+const hat0Container = document.getElementById('hat0');
+const hat1Container = document.getElementById('hat1');
+const hat2Container = document.getElementById('hat2');
 
 const button0 = document.getElementById('button-0');
 const button1 = document.getElementById('button-1');
@@ -15,21 +15,29 @@ let total = 0;
 
 //Create function first
 
-function handleGuess(crownId){
-    hatImg0.src = 'assets/goldkinghat.png';
-    hatImg1.src = 'assets/goldkinghat.png';
-    hatImg2.src = 'assets/goldkinghat.png';
+function getRandomHidingSpot() {
+    const hidingPlaces = [
+        'hat0',
+        'hat1',
+        'hat2'
+    ];
+    const index = Math.floor(Math.random() * hidingPlaces.length);
+    return hidingPlaces[index];
+}
+
+function handleGuess(hatId, correctSpot){
+    hat0Container.classList.remove('pearl');
+    hat1Container.classList.remove('pearl');
+    hat2Container.classList.remove('pearl');
 
     total++;
 
-    const numberBetweenZeroAndThree = Math.floor(Math.random() * 3);
+    let hidingSpotEl = document.getElementById(correctSpot + '-container');
+    hidingSpotEl.classList.toggle('pearl');
 
-    if (numberBetweenZeroAndThree === crownId){
+    if (hatId === correctSpot){
         wins++;
     }
-
-    const correctHatImgEl = document.getElementById(`hat-${numberBetweenZeroAndThree}`);
-    correctHatImgEl.src = 'assets/goldkinghat2.png';
 
     winsEl.textContent = wins;
     totalEl.textContent = total;
@@ -37,15 +45,15 @@ function handleGuess(crownId){
 // set event listeners for the buttons
 
 button0.addEventListener('click', () => {
-    handleGuess(0);
+    handleGuess('hat0', getRandomHidingSpot);
 });
 
 button1.addEventListener('click', () => {
-    handleGuess(1);
+    handleGuess('hat1', getRandomHidingSpot);
 });
 
 button2.addEventListener('click', () => {
-    handleGuess(2);
+    handleGuess('hat2', getRandomHidingSpot);
 });
 
 
