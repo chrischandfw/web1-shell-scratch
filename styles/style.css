@@ -29,8 +29,11 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     /* background-color: var(--color2); */
-	background-image: url('../assets/3kingsfortress.jpg')
+	background-image: url('../assets/3kingsfortress.jpg');
+	background-position: center;
 }
+
+
 
 main {
     display: flex;
@@ -66,6 +69,15 @@ header {
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+	background-color: gold;
+	border-radius: 25px;
+	width: 500px;
+	text-align: center;
+	border: 10px solid transparent;
+	padding: 5px;
+	border-color: goldenrod;
+	box-shadow: 2px 2px 10px 10px white;
+
 }
 
 .gutter-right {
@@ -78,6 +90,11 @@ header img {
 
 p {
     margin: var(--gutter);
+	border-radius: 25px;
+	font-style: italic;
+	background-color: gold;
+	width: 200px;
+	text-align: center;
 }
 
 footer {
@@ -123,6 +140,7 @@ footer {
 	cursor: pointer;
 	position: relative;
 	transition: 0.5s; 
+	font-family: cursive;
 }
 
 button span:after {
@@ -135,7 +153,7 @@ button span:after {
 }
 
 button:hover {
-	background-color: #f7c2f9;
+	background-color: #720b75;
 }
 
 button:hover span {
@@ -145,4 +163,12 @@ button:hover span {
 button:hover span:after {
 	opacity: 1;
 	right: 0;
+}
+
+.tracker{
+	background-color: gold;
+	width: 250px;
+	text-align: center;
+	border-radius: 25px;
+	font-weight: bold;
 }
