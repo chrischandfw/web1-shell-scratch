@@ -2,11 +2,11 @@
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: rgb(230, 68, 216);
-    --color2: rgb(230, 68, 216);
+    /* --color1: rgb(230, 68, 216); */
+    /* --color2: rgb(230, 68, 216); */
     --color3: rgb(255, 255, 255);
     --color4: rgb(255, 255, 255);
-    --color5: rgb(230, 68, 216);
+    /* --color5: rgb(230, 68, 216); */
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -28,7 +28,8 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    /* background-color: var(--color2); */
+	background-image: url('../assets/3kingsfortress.jpg')
 }
 
 main {
@@ -40,7 +41,7 @@ main {
 }
 
 section {
-    background-color: var(--color5);
+    /* background-color: var(--color5); */
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -111,7 +112,7 @@ footer {
 }
 
 .main-logo{
-	width: 750px;
+	width: 555px;
 }
 
 .buttons{

@@ -15,7 +15,7 @@ let total = 0;
 
 //Create function first
 
-function handleGuess(hatId){
+function handleGuess(crownId){
     hatImg0.src = 'assets/goldkinghat.png';
     hatImg1.src = 'assets/goldkinghat.png';
     hatImg2.src = 'assets/goldkinghat.png';
@@ -24,7 +24,7 @@ function handleGuess(hatId){
 
     const numberBetweenZeroAndThree = Math.floor(Math.random() * 3);
 
-    if (numberBetweenZeroAndThree === hatId){
+    if (numberBetweenZeroAndThree === crownId){
         wins++;
     }
 
