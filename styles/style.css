@@ -178,3 +178,8 @@ button:hover span:after {
 	content: url('./assets/dragonpearl3.png');
 	position: absolute;
 }
+
+.rotate {
+	transition: transform 5s ease-in;
+	transform-origin: 100%;
+}
