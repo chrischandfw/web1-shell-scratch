@@ -13,38 +13,7 @@ const totalEl = document.getElementById('total');
 let wins = 0;
 let total = 0;
 
-//Create function first
 
-function getRandomHidingSpot() {
-    const hidingPlaces = [
-        'hat0',
-        'hat1',
-        'hat2'
-    ];
-    const index = Math.floor(Math.random() * hidingPlaces.length);
-    return hidingPlaces[index];
-}
-
-function handleGuess(hatId, correctSpot) {
-    hat0Container.classList.remove('pearl');
-    hat1Container.classList.remove('pearl');
-    hat2Container.classList.remove('pearl');
-
-    total++;
-
-    let hidingSpotEl = document.getElementById(correctSpot + '-container');
-    hidingSpotEl.classList.toggle('pearl');
-
-    if (hatId === correctSpot){
-        wins++;
-    }
-
-    const correctHatImgEl = document.getElementById('hat0-container', 'hat1-container', 'hat2-container');
-    correctHatImgEl.src = 'assets/dragonpearl2.png';
-
-    winsEl.textContent = wins;
-    totalEl.textContent = total;
-}
 // set event listeners for the buttons
 
 button0.addEventListener('click', () => {
@@ -62,8 +31,52 @@ button2.addEventListener('click', () => {
     handleGuess('hat2', correctSpot);
 });
 
+//Create function first
 
+function getRandomHidingSpot() {
+    const hidingPlaces = [
+        'hat0',
+        'hat1',
+        'hat2'
+    ];
+    const index = Math.floor(Math.random() * hidingPlaces.length);
+    return hidingPlaces[index];
+}
 
+function handleGuess(hatId, correctSpot) {
+    resetStyles();
+
+    total++;
+
+    let hidingSpotEl = document.getElementById(correctSpot + '-container');
+    hidingSpotEl.classList.toggle('./assets/dragonpearl3.png');
+
+    if (hatId === correctSpot){
+        wins++;
+    }  
+
+    totals();
+    //const correctHatImgEl = document.getElementById('hat0-container', 'hat1-container', 'hat2-container');
+    //correctHatImgEl.src = 'assets/dragonpearl2.png';
+
+}
+
+function resetStyles() {
+    hat0Container.src = './assets/goldkinghat.png';
+    hat1Container.src = './assets/goldkinghat.png';
+    hat2Container.src = './assets/goldkinghat.png';
+}
+
+function totals(){
+    winsEl.textContent = wins;
+    totalEl.textContent = total;
+}
+
+document.querySelector('.rotate').addEventListener('click', function(){
+    current_rotation += 90;
+    document.querySelector('.rotate').style.transform = 'rotate(' + current_rotation + 'deg)';
+});
+const current_rotation = 0;
 
   // get user input
   // use user input to update state 
