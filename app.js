@@ -13,6 +13,7 @@ const totalEl = document.getElementById('total');
 let wins = 0;
 let total = 0;
 
+resetStyles();
 
 // set event listeners for the buttons
 
@@ -49,7 +50,7 @@ function handleGuess(hatId, correctSpot) {
     total++;
 
     let hidingSpotEl = document.getElementById(correctSpot + '-container');
-    hidingSpotEl.classList.toggle('./assets/dragonpearl3.png');
+    hidingSpotEl.src = ('./assets/goldkinghat2.png');
 
     if (hatId === correctSpot){
         wins++;
